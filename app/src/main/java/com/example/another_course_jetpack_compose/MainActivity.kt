@@ -20,12 +20,9 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Create
-import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -259,27 +256,6 @@ fun CoilFunctions(expanded: Boolean) {
         maxLines = if (expanded) 20 else 4,
         overflow = TextOverflow.Ellipsis,
         modifier = Modifier.padding(horizontal = 5.dp, vertical = 5.dp)
-    )
-}
-
-@Composable
-fun Material3BottomBar() {
-    BottomAppBar(
-        containerColor = MaterialTheme.colorScheme.primary,
-        contentColor = MaterialTheme.colorScheme.onPrimary,
-        actions = {
-            IconButton(onClick = {}) {
-                Icon(imageVector = Icons.Filled.Favorite, contentDescription = null)
-            }
-
-            IconButton(onClick = {}) {
-                Icon(imageVector = Icons.Filled.Create, contentDescription = null)
-            }
-
-            IconButton(onClick = {}) {
-                Icon(imageVector = Icons.Filled.AddCircle, contentDescription = null)
-            }
-        },
     )
 }
 
