@@ -20,7 +20,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -52,6 +53,10 @@ dependencies {
     implementation(libs.androidx.material3)
 
     implementation(libs.androidx.compose.material.icons.core)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.test)
+    implementation(libs.coil.network.okhttp)
+    implementation(libs.androidx.material.icons.extended)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
